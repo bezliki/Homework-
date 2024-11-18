@@ -25,7 +25,7 @@ const car = {}
 Object.defineProperty(car, "price", {value: 1000, enumerable:false})
 console.log(car.price + '\n')
 
-//the second
+//the third
 console.log('the third\n')
 
 const keys = ['help', 'dom', 'build']
