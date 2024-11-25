@@ -56,7 +56,8 @@ infoLog('Это информационное сообщение.')
 console.log('fifth\n')
 const sum = function calculateSum(arr) {
    if(arr.length<1) return 0
-   return arr.pop() + calculateSum(arr)
+    //return arr.pop() + calculateSum(arr)
+   return arr[0] + calculateSum(arr.slice([1]))
 }
 
 console.log(sum([3, 4,6 ,7,90]))
