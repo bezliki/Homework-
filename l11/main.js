@@ -12,6 +12,11 @@ const Car = Object.create(Vehicle)
 Car.type = 'машина'
 Car.move()
 
+Car.move = function ()
+{
+    console.log(`${this.type} is broken`)
+}
+Car.move()
 
 console.log('second\n')
 
