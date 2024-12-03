@@ -110,14 +110,17 @@ class Student extends AnotherPerson {
     }
 
     setGrade(newGrade) {
-        if (newGrade > 0 && newGrade < 6)
+        if (newGrade > 0 && newGrade < 6)}
             this.#grade= newGrade
+    } else {
+        console.log('grade should be between 1 and 5')
+    }
     }
 }
 
 const student = new Student('Tery', 3)
 console.log(student.getGrade());
-student.setGrade(5) 
+student.setGrade(10)
 console.log(student.getGrade());
 
 
@@ -136,16 +139,16 @@ class Shape{
 
     constructor(name, width, height){
         this.#name = name
-        this.width = width
-        this.height = height
+        this.#width = width
+        this.#height = height
         Shape.count++
     }
 
     getArea(){
-        return  this.width + this.height
+        return 'def method'
     }
 
-    getName() { 
+    get name() { 
         return this.#name
     }
 }
@@ -173,10 +176,10 @@ class Circle extends Shape{
 
 const rect = new Rectangle('Rectangle', 10, 5)
 console.log(rect.getArea());
-console.log(rect.getName());
+console.log(rect.name);
 
 const circle = new Circle('circle', 12)
-console.log(circle.getName());
+console.log(circle.name);
 console.log(circle.getArea());
 
 console.log(Shape.count)
