@@ -121,11 +121,12 @@ class Student extends AnotherPerson {
 const student = new Student('Tery', 3)
 console.log(student.getGrade());
 student.setGrade(10)
+student.setGrade(5)
 console.log(student.getGrade());
 
 
 const student1 = new Student('Tery', 10)
-console.log(student.getGrade());
+console.log(student1.getGrade());
 
 
 
@@ -137,15 +138,13 @@ class Shape{
     #name
     static count = 0
 
-    constructor(name, width, height){
+    constructor(name){
         this.#name = name
-        this.#width = width
-        this.#height = height
         Shape.count++
     }
 
     getArea(){
-        return 'def method'
+        return 0
     }
 
     get name() { 
@@ -155,7 +154,9 @@ class Shape{
 
 class Rectangle extends Shape{
     constructor(name, width, height){
-        super(name, width, height)
+        super(name)
+        this.#width = width
+        this.#height = height
     }
 
     getArea(){
