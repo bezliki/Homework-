@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clickButton">Нажми меня</button>
+    <div id="counter">Количество кликов: 0</div>
+
+
+    <script>
+        let clickCount = 0;
+        const handleClick = () => {
+            clickCount++; 
+            document.getElementById('counter').innerText = `Количество кликов: ${clickCount}`
+        }
+
+        window.onload = () => {
+            const button = document.getElementById('clickButton')
+            button.addEventListener('click', handleClick)
+        };
+    </script>
+</body>
+</html>
